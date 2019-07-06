@@ -5,7 +5,7 @@
 <mapper namespace="com.itheima.dao.IUserDao">
     <!--配置查询所有-->
     <!--id与对应接口的方法名相同-->
-    <select id="findAll">
+    <select id="findAll" resultType="com.itheima.domain.User">
         select * from mybatistest
     </select>
 </mapper>
