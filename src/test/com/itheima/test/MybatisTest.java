@@ -8,6 +8,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import java.io.InputStream;
+import java.util.Date;
 import java.util.List;
 
 public class MybatisTest {
@@ -26,6 +27,13 @@ public class MybatisTest {
         for(User user : users){
             System.out.println(user);
         }
+        /*User user = new User();
+        user.setId(41);
+        user.setUsername("老王");
+        user.setBirthday(new Date());
+        user.setSex("男");
+        user.setAddress("北京");
+        userDao.insert(user);*/
         //释放资源
         session.close();
         in.close();

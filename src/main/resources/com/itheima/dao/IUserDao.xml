@@ -8,4 +8,7 @@
     <select id="findAll" resultType="com.itheima.domain.User">
         select * from mybatistest
     </select>
+    <insert id="insert" parameterType="com.itheima.domain.User">
+        INSERT INTO mybatistest(id,username,birthday,sex,address) VALUES(#{id},#{username},#{birthday},#{sex},#{address})
+    </insert>
 </mapper>
