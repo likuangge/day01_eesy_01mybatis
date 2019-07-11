@@ -6,9 +6,12 @@
     <!--配置查询所有-->
     <!--id与对应接口的方法名相同-->
     <select id="findAll" resultType="com.itheima.domain.User">
-        select * from mybatistest
+        select * from mybatistest;
     </select>
-    <insert id="insert" parameterType="com.itheima.domain.User">
+    <!--insert id="insert" parameterType="com.itheima.domain.User">
         INSERT INTO mybatistest(id,username,birthday,sex,address) VALUES(#{id},#{username},#{birthday},#{sex},#{address})
+    </insert-->
+    <insert id="saveUser" parameterType="com.itheima.domain.User">
+        INSERT INTO mybatistest(username, address, sex, birthday)VALUES(#{username}, #{address}, #{sex}, #{birthday});
     </insert>
 </mapper>

@@ -8,5 +8,7 @@ import java.util.List;
 public interface IUserDao {
     //查询所有操作
     List<User> findAll();
-    void insert(User user);
+    //void insert(User user);
+    void saveUser(User user);
+
 }
